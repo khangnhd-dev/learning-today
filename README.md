@@ -32,3 +32,27 @@ https://github.com/nguyentranchung/clean-code-php#tr%C3%A1nh-%C4%91i%E1%BB%81u-k
       
 - Tránh kiểm tra kiểu dữ liệu (phần 2)
 - Xóa dead code
+
+## PHP
+https://josephsilber.com/posts/2016/07/13/closure-from-callable-in-php-7-1
+
+https://stackoverflow.com/questions/29730720/php-type-hinting-difference-between-closure-and-callable
+
+Code demo
+```php
+<?php 
+	 function map(Closure $callback){
+		 echo "I am map function";
+		 $callback();
+	 }
+
+	function callback(){
+		echo "I am callback function";
+	}
+
+	map(Closure::fromCallable('callback'));
+```
+
+
+
+
